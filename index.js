@@ -36,15 +36,11 @@ const questions = [
 ];
 
 // function to generate logo
-// function generateLogo(logo) {
-//     const svgContent = `
-// <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-//     ${logo.getSVG()} <!-- Changed from logoShape to logo -->
-//     <text x="50%" y="50%" text-anchor="middle" fill="${logo.color}" font-size="40" dy=".3em">${logo.name}</text>
-// </svg>`;
-//     fs.writeFileSync('logo.svg', svgContent);
-//     console.log('Generated logo.svg');
-// }
+function generateLogo(logo) {
+    const svgContent = logo.generateSVG()
+    fs.writeFileSync('logo.svg', svgContent);
+    console.log('Generated logo.svg');
+}
 
 
 
@@ -55,11 +51,11 @@ function init() {
             console.log(response);
             let logo;
             if (response.shape === 'square') {
-                logo = new Square(response.text, response.color, response.shape);
+                logo = new Square(response.text, response.color,"white");
             } else if (response.shape === 'circle') {
-                logo = new Circle(response.text, response.color, response.shape);
+                logo = new Circle(response.text, response.color,"white");
             } else if (response.shape === 'triangle') {
-                logo = new Triangle(response.text, response.color, response.shape);
+                logo = new Triangle(response.text, response.color,"white");
             }
             console.log(logo);
             generateLogo(logo);
