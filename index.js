@@ -24,8 +24,16 @@ const questions = [
     {
         type: 'input',
         name: 'color',
-        message: 'Please select a color for your logo.',
+        message: 'Please select a background color for your logo.',
     },
+    // text color input for logo
+    {
+        type: 'input',
+        name: 'textColor',
+        message: 'Please select a text color for your logo.',
+        },
+
+    
     // shape input for logo
     {
         type: 'list',
@@ -51,11 +59,11 @@ function init() {
             console.log(response);
             let logo;
             if (response.shape === 'square') {
-                logo = new Square(response.text, response.color,"white");
+                logo = new Square(response.text, response.color, response.textColor);
             } else if (response.shape === 'circle') {
-                logo = new Circle(response.text, response.color,"white");
+                logo = new Circle(response.text, response.color, response.textColor);
             } else if (response.shape === 'triangle') {
-                logo = new Triangle(response.text, response.color,"white");
+                logo = new Triangle(response.text, response.color, response.textColor);
             }
             console.log(logo);
             generateLogo(logo);
