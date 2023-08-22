@@ -4,11 +4,9 @@ This product takes user inputs to generate a logo. Please look under examples fo
 
 ## Table of Contents
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 - [License](#license)
+- [Video](#video)
 
 ## Installation
 You will need jest, inquirer and node.js for this application to work. Please refer to the documentation
@@ -21,3 +19,5 @@ If you have any questions, please contact me at [email](mailto:Kevin.donnelly3@g
 This project uses the MIT license.
 For more information, visit https://opensource.org/licenses/MIT.
 
+## Video
+https://drive.google.com/file/d/1xLJ7dnMCe_QTucnOMdQsUzAJA9kSqw4Q/view
